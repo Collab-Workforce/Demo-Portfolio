@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <!-- Boxicons CDN -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="#" class="logo">Portfolio.</a>
+        <ul>
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Bars Animation -->
+    <div class="bars-animation">
+        <div class="bar" style="--i:6;"></div>
+        <div class="bar" style="--i:5;"></div>
+        <div class="bar" style="--i:4;"></div>
+        <div class="bar" style="--i:3;"></div>
+        <div class="bar" style="--i:2;"></div>
+        <div class="bar" style="--i:1;"></div>
+
+    </div>
+
+    <!-- Home Section -->
+    <section class="home">
+        <div class="home-info">
+            <h1>Collab Workforce</h1>
+            <h2>I'm a
+                <span style="--i:5;" data-text="Python Developer">Python Developer</span>
+                <span style="--i:4;" data-text="Web Developer">Web Developer</span>
+                <span style="--i:3;" data-text="SQL Engineer">SQL Engineer</span>
+                <span style="--i:2;" data-text="Machine Learning Engineer">Machine Learning Engineer</span>
+            </h2>
+            <p>
+                I specialize in Machine Learning, Back-End Development, and SQL Databases. With a passion for creating
+                efficient and scalable solutions, I have hands-on experience working with Python frameworks and tools
+                for developing data-driven applications. From designing robust SQL databases to deploying predictive
+                models, I strive to bridge the gap between technology and business needs.
+            </p>
+            <div class="btn-sci">
+                <!-- Start Button -->
+                <a href="#" class="btn">Start With CW</a>
+                <!-- Social Media Icons -->
+                <div class="sci">
+                    <a href="https://github.com/Collab-Workforce"><i class="bx bxl-github"></i></a>
+                    <a href="#"><i class="bx bxl-gmail"></i></a>
+                    <a href="#"><i class="bx bxl-facebook"></i></a>
+                    <a href="#"><i class="bx bxl-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="home-img">
+            <div class="img-box">
+                <div class="img-item">
+                    <img src="home.png (1).png" alt="Portfolio Image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>
+            I am a passionate developer with expertise in creating efficient and scalable solutions. With a strong
+            foundation in Python, Machine Learning, and Web Development, I aim to solve complex problems and deliver
+            impactful results. I enjoy learning and applying the latest technologies to my projects.
+        </p>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <h2>My Portfolio</h2>
+        <div class="portfolio-gallery">
+            <div class="portfolio-item">
+                <img src="home.png 2.jpg" alt="Project 1">
+                <h3>Project 1</h3>
+                <p>Machine Learning Model for Predictive Analysis.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="home.jpg2.jpg" alt="Project 2">
+                <h3>Project 2</h3>
+                <p>Web Application for E-commerce Price Prediction.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="home.png 4.jpg" alt="Project 3">
+                <h3>Project 3</h3>
+                <p>SQL Database Design for Inventory Management.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2>Services</h2>
+        <div class="services-container">
+            <div class="service-item">
+                <i class="bx bx-code"></i>
+                <h3>Web Development</h3>
+                <p>Custom websites tailored to your business needs.</p>
+            </div>
+            <div class="service-item">
+                <i class="bx bx-brain"></i>
+                <h3>Machine Learning</h3>
+                <p>Building intelligent systems to solve complex problems.</p>
+            </div>
+            <div class="service-item">
+                <i class="bx bx-database"></i>
+                <h3>SQL Engineering</h3>
+                <p>Efficient database solutions for large-scale applications.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out for collaborations or project inquiries.</p>
+        <form action="#" method="post" class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 TechVerse Solutions. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                const targetId = e.target.getAttribute('href').slice(1);
+                document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Redirect on "Start With CW" button click
+        document.querySelector('.btn').addEventListener('click', () => {
+            document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+
+
+</body>
+
+</html>
