@@ -80,13 +80,14 @@ a {
     display: flex;
     align-items: center;
     gap: 50px;
-    height: 100vh;
-    padding: 60px 9% 0;
+    /* height: 100vh; */
+    padding: 8rem 9% 4rem;
     color: var(--white-color);
     visibility: hidden;
     opacity: 0;
     animation: show-content 1.5s linear forwards;
     animation-delay: 1.6s;
+    background-color: var(--section-bg-color);
 }
 
 .home-info h1 {
@@ -307,14 +308,11 @@ section h2::before {
     left: 30%;
     width: 180px;
     height: 250px;
-    background-image: radial-gradient(circle, rgb(250, 1, 1) 2px, transparent 2px);
+    background-image: radial-gradient(circle, rgb(11, 196, 41) 2px, transparent 2px);
     background-size: 10px 10px;
     opacity: 8%;
 }
 
-#about p {
-    color: var(--text-color);
-}
 
 section h2::after {
     content: "";
@@ -328,6 +326,7 @@ section h2::after {
 
 /* About Section */
 #about p {
+    color: var(--text-color);
     font-size: 18px;
     line-height: 1.8;
     margin-top: 20px;
@@ -418,6 +417,7 @@ section h2::after {
 .contact p {
     font-size: 18px;
     margin-bottom: 30px;
+    color: var(--text-color);
 }
 
 .contact-form {
